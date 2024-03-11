@@ -30,6 +30,18 @@ header {
     margin-left: 10px; /*Space between image and text */
 }
 
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 20px auto; /* Centers the table */
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
