@@ -14,8 +14,6 @@ header {
 .side-image {
     z-index: -1; /* Ensures text is above images */
     height: 100px; /* Adjust the height as needed */
-    margin-right: 10px; /* Space between the image and text*/
-    margin-left: 10px; /*Space between image and text */
 }
 
 
@@ -24,6 +22,8 @@ header {
     left: 0;
     top: 50%;
     transform: translateY(-50%); /* Vertically centers images */
+
+    max-width: 10%; /* Images take up to 30% of parent */
 }
 
 .image-right {
@@ -31,17 +31,24 @@ header {
     right: 0;
     top: 50%;
     transform: translateY(-50%); 
-}
 
+    max-width: 10%; /* Images take up to 30% of parent */
+}
+.banner-content {
+    display: flex; /* Use flexbox for flexible scaling */
+    align-items: center; /* Align items in the center vertically*/
+    justify-content: space-around; /* Distribute content with space around it */
+    max-width: 100%; 
+    margin: 0 auto;
+}
 
 .banner h1 {
     position: relative; /* Allows for absolute positioning of children */
-    display: inline-block; /* Make the title display inline */
-    margin: 0 10px; /* Add space on either side of the title */
-    height: 100px;
-    line-height: 100px; /* Match the banner's height */
+    font-size: 3em; /* Reduce font-size on smaller screens */
     vertical-align: middle;
     z-index: 2; /* Ensures text is above images */
+    max-width: 60%;
+    margin: auto;
 }
 
 .banner {
@@ -51,13 +58,11 @@ header {
 }
 
 @media (max-width: 600px) { /* Adjust breakpoint as needed */
-    .side-image {
-        max-width: 80%; /* Images shrink as screen gets smaller */
-        max-height: 80%; /* Images shrink as screen gets smaller */
+
+    .banner h1 { 
+        font-size: 2em; /* Reduce font-size on smaller screens */
     }
 }
-
-
 
 
 
