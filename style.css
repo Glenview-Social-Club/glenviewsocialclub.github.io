@@ -12,23 +12,56 @@ header {
 }
 
 .side-image {
+    z-index: -1; /* Ensures text is above images */
     height: 100px; /* Adjust the height as needed */
-    float: left; /* Float the left image to the left */
     margin-right: 10px; /* Space between the image and text*/
+    margin-left: 10px; /*Space between image and text */
 }
 
+
+.image-left {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%); /* Vertically centers images */
+}
+
+.image-right {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%); 
+}
+
+
 .banner h1 {
+    position: relative; /* Allows for absolute positioning of children */
     display: inline-block; /* Make the title display inline */
     margin: 0 10px; /* Add space on either side of the title */
     height: 100px;
     line-height: 100px; /* Match the banner's height */
     vertical-align: middle;
+    z-index: 2; /* Ensures text is above images */
 }
 
-.side-image:last-child {
-    float: right; /*Float the right image to the right */
-    margin-left: 10px; /*Space between image and text */
+.banner {
+    position: relative; /* Allows for absolute positioning of children */
+    text-align: center;
+    overflow: hidden; /* Prevents images spilling outside the banner */
 }
+
+@media (max-width: 600px) { /* Adjust breakpoint as needed */
+    .side-image {
+        max-width: 80%; /* Images shrink as screen gets smaller */
+        max-height: 80%; /* Images shrink as screen gets smaller */
+    }
+}
+
+
+
+
+
+
 
 table {
     border-collapse: collapse;
