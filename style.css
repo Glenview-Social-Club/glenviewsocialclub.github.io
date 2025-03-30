@@ -1,15 +1,21 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-}
 
 header {
     background-color: #f0f0f0;
     padding: 20px 0;
     text-align: center;
 }
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #007bff;
+        }
 
 .side-image {
     z-index: -1; /* Ensures text is above images */
@@ -57,6 +63,24 @@ header {
     overflow: hidden; /* Prevents images spilling outside the banner */
 }
 
+        .faq-item {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            margin-bottom: 15px;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .faq-item h2 {
+            margin-top: 0;
+            color: #28a745;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #eee;
+        }
+        .faq-answer {
+            padding-top: 10px;
+            color: #555;
+        }
 @media (max-width: 600px) { /* Adjust breakpoint as needed */
 
     .banner h1 { 
